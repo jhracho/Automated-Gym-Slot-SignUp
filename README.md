@@ -37,7 +37,8 @@ pip install -U bs4
 ```
 Download the source code by running the command below:
 ```bash
-git clone
+git clone https://github.com/jhracho/GymBot.git
+cd GymBot
 ```
 ## Further Developments
 
