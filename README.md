@@ -6,7 +6,12 @@ In August of 2020, The University of Notre Dame enterred into lockdown due to ri
 ## How does it work?
 GymBot utilizes Selenium and BeautifulSoup to automate the completion of a SignUpGenius form. The user enters the date and time of the slot(s) they desire into a bash terminal. The program generates the XPATH for each button that has to be clicked. In order to click the checkbox element, the program must use BeautifulSoup to search the inner HTML of each XPATH generated. Finally, Selenium grabs the XPATH of the checkbox button associated with the time slot and clicks it. Once all boxes are clicked, Selenium enters the contact info of the user and submits the sign-up form.
 
-## Date Codes
+## Input Formatting
+Time slots are enterred one after the other in the following format
+```bash
+{DayCode}[Time]
+```
+Consult the table below for the Day Codes:
 |Day|Letter|
 |---|------|
 |Monday|M|
@@ -16,6 +21,7 @@ GymBot utilizes Selenium and BeautifulSoup to automate the completion of a SignU
 |Friday|F|
 |Saturday|S|
 |Sunday|U|
+
 ## Test Run
 Let's say a user wants to reserve time slots on Monday at 3:30PM, Wednesday at 7:15PM, and Friday at 8:00PM. In a bash terminal, the user would run the following code:
 ```bash
