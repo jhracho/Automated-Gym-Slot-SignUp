@@ -45,6 +45,7 @@ class gymBOT():
             soup = BeautifulSoup(html, 'html.parser')
             foundID = soup.find('input')['id']
             newXPATH = '//*[@id=\"' + foundID + '\"]'
+            print("CLICKING NEW BUTTON")
             checkbox = self.driver.find_element_by_xpath(newXPATH).click() 
 
         submitButton = self.driver.find_element_by_xpath('//*[@id="submitfooter"]/div/input').click()
@@ -55,7 +56,7 @@ class gymBOT():
         self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
         firstName = WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((By.ID, "firstname"))).send_keys('Jake')
         lastName = self.driver.find_element_by_xpath('//*[@id="lastname"]').send_keys('Hracho')
-        email = self.driver.find_element_by_xpath('//*[@id="email"]').send_keys('jhracho@nd.edu')
+        email = self.driver.find_element_by_xpath('//*[@id="email"]').send_keys('email@email.com')
         self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
         Complete = self.driver.find_element_by_xpath('//*[@id="SUGContainer"]/div[2]/div/div[2]/div[1]/div[3]/div/span/span[2]/button').click()
 

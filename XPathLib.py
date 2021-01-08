@@ -16,7 +16,7 @@ def getXPATHList(arguments):
 def getXPATHNumbers(arguments):
     xpathLIST = []
     for arg in arguments:
-        if (arg[0] == 'M'):
+        if (arg[0] == 'U'):
             if (arg[1:] == '200'):
                 insertXPATH = 2 
             elif (arg[1:] == '245'):
@@ -43,7 +43,7 @@ def getXPATHNumbers(arguments):
                 insertXPATH = 13   
             elif (arg[1:] == '1100'):
                 insertXPATH = 14       
-        elif (arg[0] == 'T'):
+        elif (arg[0] == 'M'):
             if (arg[1:] == '200'):
                 insertXPATH = 15 
             elif (arg[1:] == '245'):
@@ -70,7 +70,7 @@ def getXPATHNumbers(arguments):
                 insertXPATH = 26   
             elif (arg[1:] == '1100'):
                 insertXPATH = 27 
-        elif (arg[0] == 'W'):
+        elif (arg[0] == 'T'):
             if (arg[1:] == '200'):
                 insertXPATH = 28 
             elif (arg[1:] == '245'):
@@ -97,7 +97,7 @@ def getXPATHNumbers(arguments):
                 insertXPATH = 39   
             elif (arg[1:] == '1100'):
                 insertXPATH = 40 
-        elif (arg[0] == 'H'):
+        elif (arg[0] == 'W'):
             if (arg[1:] == '200'):
                 insertXPATH = 41 
             elif (arg[1:] == '245'):
@@ -124,7 +124,7 @@ def getXPATHNumbers(arguments):
                 insertXPATH = 52   
             elif (arg[1:] == '1100'):
                 insertXPATH = 53 
-        elif (arg[0] == 'F'):
+        elif (arg[0] == 'T'):
             if (arg[1:] == '200'):
                 insertXPATH = 54 
             elif (arg[1:] == '245'):
@@ -151,7 +151,7 @@ def getXPATHNumbers(arguments):
                 insertXPATH = 65   
             elif (arg[1:] == '1100'):
                 insertXPATH = 66 
-        elif (arg[0] == 'S'):
+        elif (arg[0] == 'F'):
             if (arg[1:] == '200'):
                 insertXPATH = 67 
             elif (arg[1:] == '245'):
@@ -178,7 +178,7 @@ def getXPATHNumbers(arguments):
                 insertXPATH = 78   
             elif (arg[1:] == '1100'):
                 insertXPATH = 79 
-        elif (arg[0] == 'U'):
+        elif (arg[0] == 'S'):
             if (arg[1:] == '200'):
                 insertXPATH = 80 
             elif (arg[1:] == '245'):
@@ -206,4 +206,4 @@ def getXPATHNumbers(arguments):
             elif (arg[1:] == '1100'):
                 insertXPATH = 92 
         xpathLIST.append(insertXPATH)
-        return xpathLIST
+    return xpathLIST   
