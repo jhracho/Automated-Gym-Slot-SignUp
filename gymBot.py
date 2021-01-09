@@ -52,7 +52,7 @@ class gymBOT():
         
     # Completes sign-up by automatically adding contact info
     def FinishTheJob(self):
-        time.sleep(3)
+        time.sleep(0.5)
         self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
         firstName = WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((By.ID, "firstname"))).send_keys('Jake')
         lastName = self.driver.find_element_by_xpath('//*[@id="lastname"]').send_keys('Hracho')
