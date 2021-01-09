@@ -29,7 +29,7 @@ Let's say a user wants to reserve time slots on Monday at 4:15PM, Wednesday at 7
 python gymBot.py M500 W845 F1015
 ```
 After Selenium initializes, the user enters the link of the SignUpGenius form and the code will run as follows:
-![](Demo.gif)
+
 
 ### Dependencies
 - pip 
