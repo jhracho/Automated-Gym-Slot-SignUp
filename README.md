@@ -24,7 +24,7 @@ Consult the table below for the Day Codes:
 |Sunday|U|
 
 ### Test Run
-Let's say a user wants to reserve time slots on Monday at 4:15PM, Wednesday at 7:15PM, and Friday at 8:00PM. In a bash terminal, the user would run the following code:
+Let's say a user wants to reserve time slots on Monday at 5:00PM, Wednesday at 8:45PM, and Friday at 10:15PM. In a bash terminal, the user would run the following code:
 ```bash
 python gymBot.py M500 W845 F1015
 ```
