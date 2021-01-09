@@ -1,4 +1,5 @@
 # Automated Gym Slot Sign-Up (GymBot)
+### Developed in Fall/Winter 2020
 
 ### What is GymBot?
 In August of 2020, The University of Notre Dame enterred into lockdown due to rising COVID cases. As a result, there were a limited number of gym slots to sign up for. GymBot was made to sign up for these limited time slots faster than humanly possible. The user can enter the time slots they desire for the week, and GymBot will complete the SignUpGenius form in about 6 seconds.
