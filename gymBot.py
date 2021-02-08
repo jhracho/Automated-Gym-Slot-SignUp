@@ -20,7 +20,7 @@ from XPathLib import *
 
 # Globals
 URL = 'https://www.signupgenius.com/go/70a0b48aaaa28aaf85-test1'
-driverPATH = "C:/Users/Jake Hracho/Documents/Code/Personal Projects/Gym Signup/chromedriver.exe"
+driverPATH = "chromedriver.exe"
 ALPHABET = string.ascii_lowercase + string.ascii_uppercase + string.digits
 
 # Gym Bot Selenium Class and Functions
