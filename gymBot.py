@@ -29,11 +29,15 @@ class gymBOT():
     def __init__(self, buttonLIST):
         # Initialize
         self.driver = webdriver.Chrome(executable_path=driverPATH)
-        URL = input("Enter URL: ")
+        URL  = input("Enter URL: ")
+        CODE = input("Enter Code: ") 
         self.driver.get(URL)
         self.xpathLIST = buttonLIST
 
-        time.sleep(1)
+        time.sleep(0.5)
+        enterCode   = self.driver.find_element_by_xpath('//*[@id="passcodeId"]').send_keys(CODE)
+        submitCode  = self.driver.find_element_by_xpath('//*[@id="CFForm_1"]/div/input').click()
+        time.sleep(0.5)
         gotItButton = self.driver.find_element_by_xpath('/html/body/div[3]/div/span[2]/a').click()
 
     # Cycles through XPATHs and clicks each button
