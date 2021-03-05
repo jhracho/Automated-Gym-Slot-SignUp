@@ -29,16 +29,18 @@ class gymBOT():
     def __init__(self, buttonLIST):
         # Initialize
         self.driver = webdriver.Chrome(executable_path=driverPATH)
-        URL  = input("Enter URL: ")
-        CODE = input("Enter Code: ") 
-        self.driver.get(URL)
+        url  = input("Enter URL: ")
+        code = input("Enter Code: ") 
+        self.driver.get(url)
         self.xpathLIST = buttonLIST
 
-        time.sleep(0.5)
-        enterCode   = self.driver.find_element_by_xpath('//*[@id="passcodeId"]').send_keys(CODE)
-        submitCode  = self.driver.find_element_by_xpath('//*[@id="CFForm_1"]/div/input').click()
-        time.sleep(0.5)
-        gotItButton = self.driver.find_element_by_xpath('/html/body/div[3]/div/span[2]/a').click()
+        
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="passcodeId"]'))).send_keys(code)
+        
+        #WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '')))
+        
+        self.driver.find_element_by_xpath('//*[@id="CFForm_1"]/div/input').click()
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[3]/div/span[2]/a'))).click()
 
     # Cycles through XPATHs and clicks each button
     def reserveTimes(self):
@@ -56,7 +58,7 @@ class gymBOT():
         
     # Completes sign-up by automatically adding contact info
     def FinishTheJob(self):
-        time.sleep(0.5)
+        #time.sleep(0.5)
         self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
         firstName = WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((By.ID, "firstname"))).send_keys('Jake')
         lastName = self.driver.find_element_by_xpath('//*[@id="lastname"]').send_keys('Hracho')
