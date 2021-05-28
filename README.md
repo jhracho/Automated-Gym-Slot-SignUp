@@ -2,7 +2,7 @@
 ### Developed in Fall/Winter 2020
 
 ### What is GymBot?
-In August of 2020, The University of Notre Dame enterred into lockdown due to rising COVID cases. As a result, there were a limited number of gym slots to sign up for. GymBot was made to sign up for these limited time slots faster than humanly possible. The user can enter the time slots they desire for the week, and GymBot will complete the SignUpGenius form in about 6 seconds.
+In August of 2020, Notre Dame went into lockdown due to rising COVID cases. As a result, there were restrictions on how many people could use the gym at a time. GymBot was made to sign up for these limited time slots faster than humanly possible. The user can enter the time slots they desire for the week, and GymBot will complete the SignUpGenius form in about 6 seconds.
 
 ### How does it work?
 GymBot utilizes [Selenium](https://www.selenium.dev/) and [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) to automate the completion of a SignUpGenius form. The user enters the date and time of the slot(s) they desire into a bash terminal. The program generates the XPATH for each button that has to be clicked. In order to click the checkbox element, the program must use BeautifulSoup to search the inner HTML of each XPATH generated. Finally, Selenium grabs the XPATH of the checkbox button associated with the time slot and clicks it. Once all boxes are clicked, Selenium enters the contact info of the user and submits the sign-up form.
